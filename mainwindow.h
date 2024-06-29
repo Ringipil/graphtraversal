@@ -2,16 +2,19 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QGraphicsView>
 #include <QGraphicsScene>
-#include "graph.h"
-
-using namespace std;
+#include <QListWidget>
+//#include "graph.h"
 
 QT_BEGIN_NAMESPACE
-namespace Ui { class MainWindow; }
+namespace Ui {
+class MainWindow;
+}
 QT_END_NAMESPACE
 
-class MainWindow : public QMainWindow {
+class MainWindow : public QMainWindow
+{
     Q_OBJECT
 
 public:
@@ -19,15 +22,20 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_addEdgeButton_clicked(); // Slot for adding edge button click
-    void on_bfsButton_clicked(); // Slot for BFS button click
+    void onAddVertex();
+    void onAddEdge();
+    void onRunBFS();
+    void onRunDFS();
+    void onResetGraph();
 
 private:
     Ui::MainWindow *ui;
-    Graph graph;
-    QGraphicsScene *scene;
+    //Graph* graph;
+    QGraphicsView* view;
+    QGraphicsScene* scene;
+    QListWidget* stepsList;
 
-    void visualizeGraph(); // Method to visualize the graph
+    void updateVisualization();
 };
 
 #endif // MAINWINDOW_H
