@@ -1,1 +1,103 @@
-# include <iostream>
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1085</width>
+    <height>630</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="1" column="0">
+     <widget class="QLineEdit" name="vertexInput">
+      <property name="text">
+       <string>Vertex ID</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QPushButton" name="bfsButton">
+      <property name="text">
+       <string>Run BFS</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QComboBox" name="graphTypeComboBox">
+      <item>
+       <property name="text">
+        <string>Directed</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Unidirected</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QPushButton" name="addEdgeButton">
+      <property name="text">
+       <string>Add Edge</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLineEdit" name="edgeInput">
+      <property name="text">
+       <string>Edge (src,dest)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QPushButton" name="addVertexButton">
+      <property name="text">
+       <string>Add Vertex</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="0">
+     <widget class="QGraphicsView" name="graphicsView"/>
+    </item>
+    <item row="9" column="1">
+     <widget class="QListWidget" name="stepsListWidget"/>
+    </item>
+    <item row="5" column="0">
+     <widget class="QPushButton" name="dfsButton">
+      <property name="text">
+       <string>Run DFS</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QPushButton" name="resetGraphButton">
+      <property name="text">
+       <string>Reset Graph</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1085</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
