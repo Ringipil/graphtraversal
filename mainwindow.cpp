@@ -109,3 +109,4 @@ void MainWindow::onResetGraph() {
 void MainWindow::updateVisualization() {
     // Implementation for updating visualization
 }
+
